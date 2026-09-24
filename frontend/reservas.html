@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reservas.css">
+</head>
+
+<body>
+
+    <main class="reservas">
+
+        <h1>Reservar computadora</h1>
+        <p>Elegí un carrito, un horario y una computadora.</p>
+
+        <h2>Elegí un carrito</h2>
+        
+        <div class="carritos">
+            <button onclick="seleccionar(this, 'carritos')">Carrito 1</button>
+            <button onclick="seleccionar(this, 'carritos')">Carrito 2</button>
+        </div>
+
+        <h2>Elegí un horario</h2>
+
+        <div class="horarios">
+            <button onclick="seleccionar(this, 'horarios')">7:40 - 9:40</button>
+            <button onclick="seleccionar(this, 'horarios')">10:00 - 12:00</button>
+            <button onclick="seleccionar(this, 'horarios')">13:10 - 15:10</button>
+            <button onclick="seleccionar(this, 'horarios')">15:30 - 17:30</button>
+            <button onclick="seleccionar(this, 'horarios')">17:40 - 19:40</button>
+            <button onclick="seleccionar(this, 'horarios')">19:50 - 21:50</button>
+        </div>
+
+        <h2>Elegí una computadora</h2>
+
+        <div class="computadoras">
+            <button onclick="seleccionar(this, 'computadoras')">PC 1</button>
+            <button onclick="seleccionar(this, 'computadoras')">PC 2</button>
+            <button onclick="seleccionar(this, 'computadoras')">PC 3</button>
+            <button onclick="seleccionar(this, 'computadoras')">PC 4</button>
+            <button onclick="seleccionar(this, 'computadoras')">PC 5</button>
+            <button onclick="seleccionar(this, 'computadoras')">PC 6</button>
+            <button onclick="seleccionar(this, 'computadoras')">PC 7</button>
+            <button onclick="seleccionar(this, 'computadoras')">PC 8</button>
+            <button onclick="seleccionar(this, 'computadoras')">PC 9</button>
+            <button onclick="seleccionar(this, 'computadoras')">PC 10</button>
+        </div>
+
+        <button class="boton-reservar" onclick="reservar()">Reservar</button>
+        <script src="js/script.js"></script>
+    </main>
+
+</body>
+</html>
