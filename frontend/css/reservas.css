@@ -1,0 +1,75 @@
+.reservas {
+    width: 800px;
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 31, 63, 0.15);
+}
+
+.reservas h1 {
+    text-align: center;
+    color: #0b2d4d;
+    margin-bottom: 10px;
+}
+
+.reservas > p {
+    text-align: center;
+    color: #607080;
+    margin-bottom: 35px;
+}
+
+.reservas h2 {
+    color: #0b2d4d;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.carritos,
+.horarios,
+.computadoras {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.carritos button,
+.horarios button,
+.computadoras button {
+    padding: 12px 18px;
+    border: 1px solid #b8c8d9;
+    border-radius: 6px;
+    background-color: #f5f8fb;
+    color: #0b2d4d;
+    cursor: pointer;
+}
+
+.carritos button:hover,
+.horarios button:hover,
+.computadoras button:hover {
+    background-color: #0b2d4d;
+    color: white;
+}
+
+.boton-reservar {
+    width: 100%;
+    margin-top: 30px;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0b2d4d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton-reservar:hover {
+    background-color: #164f80;
+}
+
+.seleccionado { 
+    background-color: #0b2d4d !important; 
+    color: white !important; 
+    border-color: #0b2d4d !important; 
+}
