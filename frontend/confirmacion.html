@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva confirmada</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/confirmacion.css">
+</head>
+
+<body>
+
+    <main class="confirmacion">
+
+        <h1>¡Reserva realizada!</h1>
+
+        <p>Tu reserva fue registrada correctamente.</p>
+
+        <h2>Datos de la reserva</h2>
+
+        <p>Carrito: <span id="carrito"></span></p>
+
+        <p>Horario: <span id="horario"></span></p>
+
+        <p>Computadora: <span id="computadora"></span></p>
+
+        <button onclick="volver()">Volver a reservar</button>
+
+    </main>
+
+    <script>
+
+        document.getElementById("carrito").textContent =
+            localStorage.getItem("carrito")
+
+        document.getElementById("horario").textContent =
+            localStorage.getItem("horario")
+
+        document.getElementById("computadora").textContent =
+            localStorage.getItem("computadora")
+
+
+        function volver() {
+            window.location.href = "reservas.html"
+        }
+
+    </script>
+
+</body>
+</html>
