@@ -1,0 +1,25 @@
+.confirmacion {
+    width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+}
+
+.confirmacion h1 {
+    color: #123c69;
+}
+
+.confirmacion span {
+    font-weight: bold;
+    color: #123c69;
+}
+
+.confirmacion button {
+    padding: 10px 20px;
+    background: #123c69;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
