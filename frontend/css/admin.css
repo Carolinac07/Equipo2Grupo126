@@ -1,0 +1,48 @@
+.administracion {
+width: 800px;
+max-width: 90%;
+margin: 40px auto;
+padding: 25px;
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 4px 15px rgba(0, 31, 63, 0.15);
+}
+.administracion h1,
+.administracion h2 {
+text-align: center;
+color: #0b2d4d;
+}
+.administracion > p {
+text-align: center;
+color: #607080;
+}
+.reserva {
+margin: 20px 0;
+padding: 15px;
+border: 1px solid #b8c8d9;
+border-radius: 8px;
+}
+.reserva p {
+margin: 8px 0;
+}
+.reserva button {
+padding: 10px;
+border: none;
+border-radius: 5px;
+background-color: #b83232;
+color: white;
+cursor: pointer;
+}
+.administracion > button {
+display: block;
+margin: 20px auto 0;
+padding: 10px;
+border: none;
+border-radius: 5px;
+background-color: #0b2d4d;
+color: white;
+cursor: pointer;
+}
+#mensaje {
+color: #0b2d4d;
+}
