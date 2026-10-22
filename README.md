@@ -69,7 +69,3 @@ Equipo2Grupo126/
 El frontend tiene las pantallas principales y permite probar el proceso de una reserva. La base de datos también está creada en Supabase.
 
 Queda pendiente conectar el frontend con el backend, implementar el inicio de sesión real y completar la gestión de las reservas.
-
-## Integrantes
-
-Proyecto realizado por el equipo de trabajo de la Escuela Técnica N.º 1.
