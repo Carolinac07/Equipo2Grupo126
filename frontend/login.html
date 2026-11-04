@@ -7,25 +7,52 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
+    <div class="login-tema">
+        <button id="cambiarTema" class="boton-tema" type="button">
+            ☾ Modo oscuro
+        </button>
+    </div>
+
     <main class="login">
+
+        <img src="img/logoesc.png" alt="Escuela Técnica N° 1">
+
         <h1>Reserva de Computadoras</h1>
 
-        <p>Iniciá sesión para realizar una reserva</p>
+        <p>Ingresá tus datos para acceder al sistema.</p>
 
         <form id="formLogin">
+
             <label for="usuario">Correo electrónico</label>
-            <input type="email" id="usuario" placeholder="Ingresá tu correo electrónico" required>
+            <input
+                type="email"
+                id="usuario"
+                placeholder="Ingresá tu correo electrónico"
+                required
+            >
 
             <label for="contraseña">Contraseña</label>
-            <input type="password" id="contraseña" placeholder="Ingresá tu contraseña" required>
+            <input
+                type="password"
+                id="contraseña"
+                placeholder="Ingresá tu contraseña"
+                required
+            >
 
             <button type="submit">Ingresar</button>
+
         </form>
 
         <p id="mensaje"></p>
+
+        <span class="login-pie">Escuela Técnica N° 1</span>
+
     </main>
 
+    <script src="js/tema.js"></script>
     <script src="js/login.js"></script>
+
 </body>
 </html>

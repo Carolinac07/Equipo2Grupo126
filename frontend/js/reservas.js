@@ -18,7 +18,7 @@ function seleccionar(boton, grupo) {
     }
 }
 
-function reservar() {   
+function reservar() {
     let fecha = document.getElementById("fecha").value
     let carrito = document.querySelector(".carritos .seleccionado")
     let horario = document.querySelector(".horarios .seleccionado")
@@ -34,10 +34,14 @@ function reservar() {
         return
     }
 
-    localStorage.setItem("fecha", fecha)
-    localStorage.setItem("carrito", carrito.textContent)
-    localStorage.setItem("horario", horario.textContent)
-    localStorage.setItem("computadora", computadora.textContent)
+    document.getElementById("confirmarFecha").textContent = fecha
+    document.getElementById("confirmarCarrito").textContent = carrito.textContent
+    document.getElementById("confirmarHorario").textContent = horario.textContent
+    document.getElementById("confirmarComputadora").textContent = computadora.textContent
 
-    window.location.href = "confirmacion.html"
+    document.getElementById("modalConfirmacion").style.display = "flex"
+}
+
+function cerrarConfirmacion() {
+    document.getElementById("modalConfirmacion").style.display = "none"
 }

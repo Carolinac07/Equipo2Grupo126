@@ -5,5 +5,137 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #eaf0f7;
+    background-color: #edf2f8;
+    color: #102b49;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.encabezado {
+    width: 100%;
+    min-height: 90px;
+    padding: 12px 5%;
+    background-color: #102b49;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.encabezado__logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.encabezado__logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.encabezado__logo h2 {
+    margin: 0 0 5px;
+    font-size: 19px;
+}
+
+.encabezado__logo p {
+    margin: 0;
+    color: #b9d9f5;
+    font-size: 14px;
+}
+
+.encabezado__acciones {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.encabezado__acciones button {
+    padding: 10px 16px;
+    border: 1px solid #8bbce4;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.boton-tema {
+    background-color: #d9ebfa;
+    color: #102b49;
+}
+
+.boton-salir {
+    background-color: transparent;
+    color: white;
+}
+
+.encabezado__acciones button:hover {
+    opacity: 0.85;
+}
+
+body.modo-oscuro {
+    background-color: #091a2d;
+    color: #e7f1fb;
+}
+
+body.modo-oscuro .reservas {
+    background-color: #132b45;
+    color: #e7f1fb;
+}
+
+body.modo-oscuro .reservas h1,
+body.modo-oscuro .reservas h2 {
+    color: #e7f1fb;
+}
+
+body.modo-oscuro .descripcion {
+    color: #b6c9dc;
+}
+
+body.modo-oscuro .seccion-reserva {
+    border-color: #294967;
+}
+
+body.modo-oscuro input,
+body.modo-oscuro .carritos button,
+body.modo-oscuro .horarios button,
+body.modo-oscuro .computadoras button {
+    background-color: #203b59;
+    color: white;
+    border-color: #42617e;
+}
+
+body.modo-oscuro .carritos button:hover,
+body.modo-oscuro .horarios button:hover,
+body.modo-oscuro .computadoras button:hover {
+    background-color: #8bc5f0;
+    color: #102b49;
+}
+
+body.modo-oscuro .seleccionado {
+    background-color: #8bc5f0 !important;
+    color: #102b49 !important;
+    border-color: #8bc5f0 !important;
+}
+
+body.modo-oscuro .boton-reservar {
+    background-color: #8bc5f0;
+    color: #102b49;
+}
+
+@media (max-width: 650px) {
+    .encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .encabezado__acciones {
+        width: 100%;
+    }
+
+    .encabezado__acciones button {
+        flex: 1;
+    }
 }

@@ -3,57 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
+    <title>Reserva de Computadoras</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reservas.css">
 </head>
 
 <body>
+    <header class="encabezado">
+        <div class="encabezado__logo">
+            <img src="img/logoesc.png" alt="Escuela Técnica N° 1">
 
+            <div>
+                <h2>Escuela Técnica N° 1</h2>
+                <p>Reserva de Computadoras</p>
+            </div>
+        </div>
+        <div class="encabezado__acciones">
+            <button id="cambiarTema" class="boton-tema" type="button">
+                ☾ Modo oscuro
+            </button>
+
+            <button class="boton-salir" type="button" onclick="cerrarSesion()">
+                Cerrar sesión
+            </button>
+        </div>
+    </header>
     <main class="reservas">
-
         <h1>Reservar computadora</h1>
-        <p>Elegí un carrito, un horario y una computadora.</p>
-        <h2>Elegí una fecha</h2>
+        <p class="descripcion">
+            Completá los siguientes pasos para realizar tu reserva.
+        </p>
+        <section class="seccion-reserva">
+            <h2>01. Elegí una fecha</h2>
+            <input type="date" id="fecha" required>
+        </section>
 
-        <input type="date" id="fecha" required>
+        <section class="seccion-reserva">
+            <h2>02. Elegí un carrito</h2>
 
-        <h2>Elegí un carrito</h2>
-        
-        <div class="carritos">
-            <button onclick="seleccionar(this, 'carritos')">Carrito 1</button>
-            <button onclick="seleccionar(this, 'carritos')">Carrito 2</button>
+            <div class="carritos">
+                <button onclick="seleccionar(this, 'carritos')">Carrito 1</button>
+                <button onclick="seleccionar(this, 'carritos')">Carrito 2</button>
+            </div>
+        </section>
+
+        <section class="seccion-reserva">
+            <h2>03. Elegí un horario</h2>
+
+            <div class="horarios">
+                <button onclick="seleccionar(this, 'horarios')">7:40 - 9:40</button>
+                <button onclick="seleccionar(this, 'horarios')">10:00 - 12:00</button>
+                <button onclick="seleccionar(this, 'horarios')">13:10 - 15:10</button>
+                <button onclick="seleccionar(this, 'horarios')">15:30 - 17:30</button>
+                <button onclick="seleccionar(this, 'horarios')">17:40 - 19:40</button>
+                <button onclick="seleccionar(this, 'horarios')">19:50 - 21:50</button>
+            </div>
+        </section>
+
+        <section class="seccion-reserva">
+            <h2>04. Elegí una computadora</h2>
+
+            <div class="computadoras">
+                <button onclick="seleccionar(this, 'computadoras')">PC 1</button>
+                <button onclick="seleccionar(this, 'computadoras')">PC 2</button>
+                <button onclick="seleccionar(this, 'computadoras')">PC 3</button>
+                <button onclick="seleccionar(this, 'computadoras')">PC 4</button>
+                <button onclick="seleccionar(this, 'computadoras')">PC 5</button>
+                <button onclick="seleccionar(this, 'computadoras')">PC 6</button>
+                <button onclick="seleccionar(this, 'computadoras')">PC 7</button>
+                <button onclick="seleccionar(this, 'computadoras')">PC 8</button>
+                <button onclick="seleccionar(this, 'computadoras')">PC 9</button>
+                <button onclick="seleccionar(this, 'computadoras')">PC 10</button>
+            </div>
+        </section>
+
+        <button class="boton-reservar" onclick="reservar()">
+            Confirmar reserva
+        </button>
+
+        <div id="mensajeReserva" class="mensaje-reserva"></div>
+
+        <div id="modalConfirmacion" class="modal-confirmacion">
+
+            <div class="modal-contenido">
+
+                <button class="modal-cerrar" onclick="cerrarConfirmacion()">×</button>
+
+                <div class="icono-confirmacion">✓</div>
+
+                <h2>Reserva realizada</h2>
+
+                <p class="modal-descripcion">
+                    Datos de tu reserva.
+                </p>
+
+                <div class="datos-reserva">
+                    <p>Fecha: <span id="confirmarFecha"></span></p>
+                    <p>Carrito: <span id="confirmarCarrito"></span></p>
+                    <p>Horario: <span id="confirmarHorario"></span></p>
+                    <p>Computadora: <span id="confirmarComputadora"></span></p>
+                </div>
+
+                <button class="boton-cerrar-modal" onclick="cerrarConfirmacion()">
+                    Entendido
+                </button>
+
+            </div>
+
         </div>
 
-        <h2>Elegí un horario</h2>
-
-        <div class="horarios">
-            <button onclick="seleccionar(this, 'horarios')">7:40 - 9:40</button>
-            <button onclick="seleccionar(this, 'horarios')">10:00 - 12:00</button>
-            <button onclick="seleccionar(this, 'horarios')">13:10 - 15:10</button>
-            <button onclick="seleccionar(this, 'horarios')">15:30 - 17:30</button>
-            <button onclick="seleccionar(this, 'horarios')">17:40 - 19:40</button>
-            <button onclick="seleccionar(this, 'horarios')">19:50 - 21:50</button>
-        </div>
-
-        <h2>Elegí una computadora</h2>
-
-        <div class="computadoras">
-            <button onclick="seleccionar(this, 'computadoras')">PC 1</button>
-            <button onclick="seleccionar(this, 'computadoras')">PC 2</button>
-            <button onclick="seleccionar(this, 'computadoras')">PC 3</button>
-            <button onclick="seleccionar(this, 'computadoras')">PC 4</button>
-            <button onclick="seleccionar(this, 'computadoras')">PC 5</button>
-            <button onclick="seleccionar(this, 'computadoras')">PC 6</button>
-            <button onclick="seleccionar(this, 'computadoras')">PC 7</button>
-            <button onclick="seleccionar(this, 'computadoras')">PC 8</button>
-            <button onclick="seleccionar(this, 'computadoras')">PC 9</button>
-            <button onclick="seleccionar(this, 'computadoras')">PC 10</button>
-        </div>
-
-        <button class="boton-reservar" onclick="reservar()">Reservar</button>
-        <script src="js/reservas.js"></script>
     </main>
+
+    <script src="js/tema.js"></script>
+    <script src="js/reservas.js"></script>
 
 </body>
 </html>
