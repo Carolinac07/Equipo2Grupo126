@@ -250,21 +250,23 @@ Por ese motivo, se encuentra incluido en el `.gitignore`, junto con la carpeta `
 
 ## Pruebas realizadas
 
-Durante el desarrollo se realizaron pruebas manuales para comprobar el funcionamiento de las distintas partes del sistema.
+Durante el desarrollo se realizaron pruebas manuales para comprobar el funcionamiento de las distintas partes del sistema y verificar la comunicación entre el frontend, el backend y Supabase.
 
-Las pruebas realizadas fueron:
+### Procedimientos y resultados
 
-- Registro de nuevos usuarios.
-- Inicio de sesión.
-- Carga de computadoras desde la base de datos.
-- Consulta de disponibilidad.
-- Creación de reservas.
-- Visualización del mensaje de confirmación.
-- Cancelación de reservas.
-- Finalización de reservas.
-- Cambio entre modo claro y modo oscuro.
+| Área | Procedimiento realizado | Resultado |
+|---|---|---|
+| Conexión y autenticación | Se inició el backend y se comprobó su conexión con Supabase. Se realizaron pruebas de registro e inicio de sesión. | La conexión funcionó correctamente y los usuarios pudieron registrarse e iniciar sesión. |
+| Interfaz y consultas | Se recorrieron las pantallas de inicio de sesión, registro, reservas y administración. También se comprobó la carga de computadoras. | Las pantallas cargaron correctamente y se obtuvieron los datos desde la base de datos. |
+| Formularios | Se probaron los formularios de registro y acceso, verificando el ingreso de los datos solicitados. | Los formularios funcionaron correctamente y se mostraron mensajes cuando ocurrió algún error. |
+| Consulta de disponibilidad | Se seleccionaron distintas fechas, carritos y horarios para consultar qué computadoras estaban ocupadas. | El sistema identificó las computadoras que tenían reservas activas y evitó seleccionarlas nuevamente. |
+| Creación de reservas | Se seleccionó una computadora disponible y se confirmó una reserva. Luego se verificó la información guardada. | La reserva se registró correctamente en Supabase y se mostró el mensaje de confirmación. |
+| Administración de reservas | Se ingresó con una cuenta de bibliotecaria y se consultaron las reservas. Se probaron las opciones de cancelar y finalizar. | Las reservas se mostraron correctamente y sus estados se actualizaron en la base de datos. |
+| Modo de visualización | Se probó el cambio entre modo claro y modo oscuro. | Ambos modos funcionaron correctamente. |
 
-Las pruebas se realizaron utilizando el sistema desde el navegador y comprobando las respuestas del backend.
+Las pruebas realizadas fueron manuales, utilizando el sistema desde el navegador y comprobando las respuestas del backend y los datos almacenados en Supabase.
+
+No se implementaron pruebas automatizadas.
 
 ## Posibles errores
 
