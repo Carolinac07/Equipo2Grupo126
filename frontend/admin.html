@@ -7,10 +7,37 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/admin.css">
 </head>
+
 <body>
+
+    <header class="encabezado">
+        <div class="encabezado__logo">
+            <img src="img/logoesc.png" alt="Escuela Técnica N° 1">
+
+            <div>
+                <h2>Escuela Técnica N° 1</h2>
+                <p>Reserva de Computadoras</p>
+            </div>
+        </div>
+
+        <div class="encabezado__acciones">
+            <button id="cambiarTema" class="boton-tema" type="button">
+                ☾ Modo oscuro
+            </button>
+
+            <button class="boton-salir" type="button" onclick="cerrarSesion()">
+                Cerrar sesión
+            </button>
+        </div>
+    </header>
+
     <main class="administracion">
+
         <h1>Administración de reservas</h1>
-        <p>Desde acá podés consultar y cancelar las reservas.</p>
+
+        <p class="descripcion">
+            Desde acá podés consultar, cancelar y liberar las reservas.
+        </p>
 
         <h2>Reservas registradas</h2>
 
@@ -18,9 +45,10 @@
 
         <p id="mensaje"></p>
 
-        <button onclick="cerrarSesion()">Cerrar sesión</button>
     </main>
 
+    <script src="js/tema.js"></script>
     <script src="js/admin.js"></script>
+
 </body>
 </html>
