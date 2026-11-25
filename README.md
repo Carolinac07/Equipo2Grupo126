@@ -105,7 +105,7 @@ Equipo2Grupo126/
 │   │   └── tema.js
 │   │
 │   ├── admin.html
-│   ├── login.html
+│   ├── index.html
 │   ├── registro.html
 │   └── reservas.html
 │
@@ -172,7 +172,7 @@ Debería aparecer el mensaje:
 
 ### 5. Abrir el frontend
 
-Abrir el archivo `frontend/login.html` desde el navegador.
+Abrir el archivo `frontend/index.html` desde el navegador.
 
 El sistema ya estará listo para utilizarse mientras el backend se encuentre funcionando.
 

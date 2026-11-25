@@ -131,7 +131,7 @@ async function reservar() {
 
     if (!usuario) {
         alert("Tenés que iniciar sesión para reservar.")
-        window.location.href = "login.html"
+        window.location.href = "index.html"
         return
     }
 
