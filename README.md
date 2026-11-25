@@ -313,6 +313,13 @@ Verificar que el usuario haya iniciado sesión, que los datos seleccionados sean
 
 ## Publicación del proyecto
 
-Actualmente, el sistema se ejecuta de manera local.
+El sistema fue publicado en Render, tanto el frontend como el backend. La base de datos se encuentra alojada en Supabase.
 
-Para utilizarlo desde otros dispositivos será necesario publicar el backend y configurar las direcciones de conexión del frontend para que apunten al servidor publicado.
+### Enlaces de acceso
+
+- **Frontend (Sistema de reservas):** https://reserva-computadoras.onrender.com
+- **Backend (API):** https://reserva-computadoras-api.onrender.com
+
+El frontend permite que los estudiantes y la bibliotecaria accedan al sistema desde internet.
+
+El backend procesa las solicitudes, gestiona las reservas y se comunica con Supabase para guardar y consultar la información.
