@@ -1,3 +1,5 @@
+const API_URL = "https://reserva-computadoras-api.onrender.com"
+
 document.getElementById("formLogin").addEventListener("submit", async function(event) {
 
     event.preventDefault()
@@ -8,7 +10,7 @@ document.getElementById("formLogin").addEventListener("submit", async function(e
 
     try {
 
-        let respuesta = await fetch("http://localhost:3000/api/usuarios/login", {
+        let respuesta = await fetch(API_URL + "/api/usuarios/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -32,7 +34,7 @@ document.getElementById("formLogin").addEventListener("submit", async function(e
             window.location.href = "admin.html"
         } else {
             window.location.href = "reservas.html"
-}
+        }
 
     } catch (error) {
 

@@ -1,5 +1,7 @@
 let reservas = []
 
+const API_URL = "https://reserva-computadoras-api.onrender.com"
+
 async function cargarReservas() {
 
     let lista = document.getElementById("listaReservas")
@@ -8,7 +10,7 @@ async function cargarReservas() {
 
     try {
 
-        let respuesta = await fetch("http://localhost:3000/api/reservas")
+        let respuesta = await fetch(API_URL + "/api/reservas")
         let resultado = await respuesta.json()
 
         if (!respuesta.ok) {
@@ -76,7 +78,7 @@ async function cambiarEstado(id, estado) {
 
     try {
 
-        let respuesta = await fetch(`http://localhost:3000/api/reservas/${id}/estado`, {
+        let respuesta = await fetch(API_URL + `/api/reservas/${id}/estado`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

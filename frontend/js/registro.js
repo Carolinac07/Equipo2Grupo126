@@ -1,3 +1,5 @@
+const API_URL = "https://reserva-computadoras-api.onrender.com"
+
 document.getElementById("formRegistro").addEventListener("submit", async function(event) {
 
     event.preventDefault()
@@ -11,7 +13,7 @@ document.getElementById("formRegistro").addEventListener("submit", async functio
 
     try {
 
-        let respuesta = await fetch("http://localhost:3000/api/usuarios/registro", {
+        let respuesta = await fetch(API_URL + "/api/usuarios/registro", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
