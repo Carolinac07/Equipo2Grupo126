@@ -1,3 +1,5 @@
+const API_URL = "https://reserva-computadoras-api.onrender.com"
+
 let listaComputadoras = []
 let computadoraSeleccionada = null
 
@@ -5,7 +7,7 @@ async function cargarComputadoras() {
 
     try {
 
-        let respuesta = await fetch("http://localhost:3000/api/computadoras")
+        let respuesta = await fetch(API_URL + "/api/computadoras")
 
         if (!respuesta.ok) {
             throw new Error("Error al cargar las computadoras")
@@ -61,7 +63,7 @@ async function mostrarComputadoras() {
     try {
 
         let respuesta = await fetch(
-            "http://localhost:3000/api/reservas/ocupadas?fecha=" +
+            API_URL + "/api/reservas/ocupadas?fecha=" +
             encodeURIComponent(fecha) +
             "&horario=" +
             encodeURIComponent(horario.textContent)
@@ -145,7 +147,7 @@ async function reservar() {
 
     try {
 
-        let respuesta = await fetch("http://localhost:3000/api/reservas", {
+        let respuesta = await fetch(API_URL + "/api/reservas", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
