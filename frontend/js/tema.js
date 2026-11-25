@@ -23,5 +23,5 @@ botonTema.addEventListener("click", function() {
 })
 
 function cerrarSesion() {
-    window.location.href = "login.html"
+    window.location.href = "index.html"
 }
